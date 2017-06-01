@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EnvWindow</class>
+ <widget class="QWidget" name="EnvWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>766</width>
+    <height>478</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>16</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff5500;&quot;&gt;在这里，您可以查看仓库内的环境信息实时数据！&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff5500;&quot;&gt;包括温度、湿度、光照、加速度等信息。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>环境温度</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>环境湿度</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>环境光照</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>电池电量</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>模拟电压</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>最新数值</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>正常范围</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,3,6">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>设备姿态</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget_2">
+        <row>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Y</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Z</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>原始值</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>新建列</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>新建列</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
