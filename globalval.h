@@ -3,6 +3,8 @@
 
 #include <QString>
 
+#define DEBUG_ON
+
 class GlobalVal
 {
 public:

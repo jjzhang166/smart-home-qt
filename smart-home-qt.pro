@@ -18,16 +18,14 @@ SOURCES += main.cpp\
     setwindow.cpp \
     ctlwindow.cpp \
     syswindow.cpp \
-    globalval.cpp \
-    sockthread.cpp
+    globalval.cpp
 
 HEADERS  += mainwindow.h \
     envwindow.h \
     setwindow.h \
     ctlwindow.h \
     syswindow.h \
-    globalval.h \
-    sockthread.h
+    globalval.h
 
 FORMS    += mainwindow.ui \
     envwindow.ui \

@@ -10,7 +10,6 @@ void SockThread::run()
 {
     //默认启动连接
     connectSlot();
-    QThread::sleep(10);
 }
 
 void SockThread::connectSlot()
@@ -25,7 +24,6 @@ void SockThread::connectSlot()
         else
         {
             qDebug()<<"connectFail";
-            emit connectFail();
         }
     }
 }

@@ -7,10 +7,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //先启动socket连接
-    sockThread = new SockThread();
-    sockThread->start();
-
     stackWidget = new QStackedWidget;
     ui->horizontalLayout->addWidget(stackWidget);
     ui->horizontalLayout->setStretch(0, 1);
@@ -28,7 +24,6 @@ MainWindow::MainWindow(QWidget *parent) :
     stackWidget->addWidget(sysWindow);
 
 //    connect(sysWindow, SIGNAL(connectSig()), this, SLOT(connectSlot()));
-    connect(sockThread, SIGNAL(connectFail()), this, SLOT(connectFailSlot()));
 }
 
 MainWindow::~MainWindow()
@@ -55,11 +50,3 @@ void MainWindow::on_sysBtn_clicked()
 {
     stackWidget->setCurrentIndex(3);
 }
-
-void MainWindow::connectFailSlot()
-{
-    qDebug()<<"connectFailSlot";
-    QMessageBox::warning(this, "错误", "连接失败，请检查服务器设置");
-}
-
-

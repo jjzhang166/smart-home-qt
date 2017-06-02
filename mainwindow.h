@@ -6,7 +6,6 @@
 #include "ctlwindow.h"
 #include "syswindow.h"
 #include "globalval.h"
-#include "sockthread.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,8 +28,6 @@ private slots:
 
     void on_sysBtn_clicked();
 
-    void connectFailSlot();
-
 private:
     Ui::MainWindow *ui;
     QStackedWidget *stackWidget;
@@ -38,7 +35,6 @@ private:
     SetWindow *setWindow;
     CtlWindow *ctlWindow;
     SysWindow *sysWindow;
-    SockThread *sockThread;
 };
 
 #endif // MAINWINDOW_H
