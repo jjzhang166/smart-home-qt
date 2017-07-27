@@ -25,9 +25,11 @@ EnvWindow::~EnvWindow()
 
 void EnvWindow::connectSlot()
 {
+    GlobalVal::ip = "192.168.1.223";
+    GlobalVal::port = "8889";
     if(tcpSocket->state() == 0)
     {
-        tcpSocket->connectToHost(GlobalVal::ip, GlobalVal::port.toInt());
+        tcpSocket->connectToHost(GlobalVal::ip, (quint16)GlobalVal::port.toInt());
         if(tcpSocket->waitForConnected(3000))
         {
             qDebug()<<"connect to server success";
@@ -48,17 +50,15 @@ void EnvWindow::receive()
     evmMsg = (envMsg_t *)envData.data();
 
 #ifdef DEBUG_ON
-    qDebug("temp = %d\n", evmMsg->temp[0]);
-    qDebug("hum = %d\n", evmMsg->hum[0]);
-    qDebug("ill = %d\n", evmMsg->ill);
-    qDebug("bet = %d\n", evmMsg->bet);
-    qDebug("adc = %d\n", evmMsg->adc);
+    qDebug("conver temperature=%0.2f, humidity=%0.2f, ill=%0.2f, bet=%0.2f, adc=%0.2f,", \
+           evmMsg->temperature, evmMsg->humidity, evmMsg->ill, evmMsg->bet, evmMsg->adc);
+    qDebug(" x=%d, y=%d, z=%d\n", evmMsg->x, evmMsg->y, evmMsg->z);
 #endif
-    ui->tableWidget->item(0,0)->setText(QString::number(evmMsg->temp[0], 10));
-    ui->tableWidget->item(1,0)->setText(QString::number(evmMsg->hum[0], 10));
-    ui->tableWidget->item(2,0)->setText(QString::number(evmMsg->ill, 10));
-    ui->tableWidget->item(3,0)->setText(QString::number(evmMsg->bet, 10));
-    ui->tableWidget->item(4,0)->setText(QString::number(evmMsg->adc, 10));
+    ui->tableWidget->item(0,0)->setText(QString::number(evmMsg->temperature));
+    ui->tableWidget->item(1,0)->setText(QString::number(evmMsg->humidity));
+    ui->tableWidget->item(2,0)->setText(QString::number(evmMsg->ill));
+    ui->tableWidget->item(3,0)->setText(QString::number(evmMsg->bet));
+    ui->tableWidget->item(4,0)->setText(QString::number(evmMsg->adc));
 }
 
 void EnvWindow::initTable()

@@ -30,7 +30,7 @@
       <set>QAbstractItemView::AllEditTriggers</set>
      </property>
      <attribute name="verticalHeaderVisible">
-      <bool>false</bool>
+      <bool>true</bool>
      </attribute>
      <row>
       <property name="text">
