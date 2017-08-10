@@ -43,8 +43,8 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>98</y>
-     <width>114</width>
+     <y>109</y>
+     <width>251</width>
      <height>62</height>
     </rect>
    </property>
@@ -52,7 +52,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>Led1:</string>
+       <string> led1</string>
       </property>
      </widget>
     </item>
@@ -66,7 +66,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Led2:</string>
+       <string> led2</string>
       </property>
      </widget>
     </item>
@@ -87,7 +87,7 @@
     <item row="2" column="0">
      <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>Led3:</string>
+       <string> beep</string>
       </property>
      </widget>
     </item>
@@ -132,8 +132,8 @@
     <rect>
      <x>20</x>
      <y>180</y>
-     <width>253</width>
-     <height>106</height>
+     <width>361</width>
+     <height>111</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
@@ -147,7 +147,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="label_7">
       <property name="text">
-       <string>Led1:</string>
+       <string> 卧室灯 </string>
       </property>
      </widget>
     </item>
@@ -168,7 +168,7 @@
     <item row="2" column="0">
      <widget class="QLabel" name="label_8">
       <property name="text">
-       <string>Led2:</string>
+       <string> 报警器 </string>
       </property>
      </widget>
     </item>
@@ -189,7 +189,7 @@
     <item row="3" column="0">
      <widget class="QLabel" name="label_9">
       <property name="text">
-       <string>seg</string>
+       <string> 客厅霓虹灯 </string>
       </property>
      </widget>
     </item>
@@ -217,7 +217,7 @@
     <item row="4" column="0">
      <widget class="QLabel" name="label_10">
       <property name="text">
-       <string>seg</string>
+       <string> 空调</string>
       </property>
      </widget>
     </item>

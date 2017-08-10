@@ -25,8 +25,8 @@ EnvWindow::~EnvWindow()
 
 void EnvWindow::connectSlot()
 {
-    GlobalVal::ip = "192.168.1.223";
-    GlobalVal::port = "8889";
+    GlobalVal::ip = "192.168.1.254";
+    GlobalVal::port = "8888";
     if(tcpSocket->state() == 0)
     {
         tcpSocket->connectToHost(GlobalVal::ip, (quint16)GlobalVal::port.toInt());
